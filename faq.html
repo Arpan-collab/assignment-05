@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- tailwind css  -->
+
+      <style>
+        .lexend-font{
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+      </style>
+</head>
+<body>
+    <nav class="max-w-screen-xl mx-auto pt-4">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <button id="btn-home" class="btn bg-lime-300">Home</button>
+            </div>
+            <div class="navbar-center gap-4 justify-center items-center">
+              <img class="w-8" src="assets/logo.png" alt="">
+              <h1 class="hidden md:flex">Donate Bangladesh</h1>
+            </div>
+            <div class="navbar-end gap-2 ">
+              <img src="assets/coin.png" alt="">
+              <span><span id="balance">5500</span> BDT</span>
+             
+            </div>
+          </div>
+    </nav>
+
+    <section class="max-w-screen-xl mx-auto mt-6">
+      <h2 class="text-5xl mb-5">Important FAQ ?</h2>
+
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+          <div class="collapse-content">
+            <p>The document object represents the whole html document. when html document is loaded in the browser,it becomes a document object. it is the root element that represents the html document
+
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+          <div class="collapse-content">
+            <p>Use an ID to Select an Element with .getElementById() Use a CSS Selector to Select an Element with .querySelector() Use a CSS Selector to Select Multiple Elements with .querySelectorAll() Other Ways to Select Elements How to Traverse the DOM</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM and Why is useful ?</div>
+          <div class="collapse-content">
+            <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.
+
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate on elements attributes and styles using the DOM ?</div>
+          <div class="collapse-content">
+            <p>If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/history.js"></script>
+</body>
+</html>
