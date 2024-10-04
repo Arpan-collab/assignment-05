@@ -1,128 +1,81 @@
 
-const Blog = document.getElementById('blog')
-BtnBlog.addEventListener('click', function(){
-    window.location.href = "/home.html"
-})
+function handleDonationNew(inputFieldId, balanceFieldId, addBalanceFieldId, historyFieldId, cause) {
+    let inputIdNew = parseFloat(document.getElementById(inputFieldId).value); 
+    let addBalanceNew = parseFloat(document.getElementById(addBalanceFieldId).innerText); 
+    let balanceNew = parseFloat(document.getElementById(balanceFieldId).innerText); 
 
-let DonationBtn = document.getElementById('donate-btn')
+    let historyOneNew = document.getElementById(historyFieldId); 
+    if (!isNaN(inputIdNew) && inputIdNew > 0 && inputIdNew <= balanceNew) {
+        let totalNew = balanceNew - inputIdNew;
+        let newBalanceNew = addBalanceNew + inputIdNew;
 
-DonationBtn.addEventListener('click', function(){
+        document.getElementById(addBalanceFieldId).innerText = newBalanceNew.toFixed(2); 
+        document.getElementById(balanceFieldId).innerText = totalNew.toFixed(2); 
+        historyOneNew.innerHTML += `
+        <p class="text-xs text-gray-500">${inputIdNew} Taka is donated for ${cause}.
+        <p class="text-xs text-gray-500">Date: ${new Date().toLocaleString()}</p>`;
 
-    DonationBtn.classList.add("bg-lime-300");
-
-    let cardSection = document.getElementById('donate-section')
-    cardSection.classList.remove("hidden")
-
-    let historySection = document.getElementById('history-section')
-    historySection.classList.add("hidden")
-
-    // DonationBtn.classList.add("bg-lime-300");
-})
-
-
-
-let HistoryBtn = document.getElementById('history-btn')
-HistoryBtn.addEventListener('click', function(){
-    let cardSection = document.getElementById('donate-section')
-    cardSection.classList.add("hidden")
-
-    HistoryBtn.classList.add("bg-lime-300");
-
-    lethistorySection = document.getElementById('history-section')
-    historySection.classList.remove("hidden")
-})
-
-
-let BtnMoney = document.getElementById('btn-money')
-BtnMoney.addEventListener('click', function(event){
-    event.preventDefault();
-
-    let inputId = parseFloat(document.getElementById('input-id').value);
-    let addBalance = parseFloat(document.getElementById('add-balance').innerText);
-    let balance = parseFloat(document.getElementById('balance').innerText);
-
-    let historyOne = document.getElementById('history-id1')
-
-    if (!isNaN(inputId) && inputId > 0 && inputId < balance) {
-        let total = balance - inputId;
-        let Amount = addBalance + inputId;
-
-        document.getElementById('add-balance').innerText = Amount.toFixed(2);
-        document.getElementById('balance').innerText = total.toFixed(2);
-        historyOne.innerHTML = ` 
-        <p class="text-xs text-gray-500">${inputId}  Taka is Donated for Donate for Flood at Noakhali, Bangladesh.
-      </p>
-        <p class="text-xs text-gray-500">Data: ${new Date()}</p>
+        document.getElementById(inputFieldId).value = "";
+        alert("Donation successful!");
+    } else {
         
-    
-    `;
-        document.getElementById('input-id').value = "";
-        alert("successful");
+        alert("Invalid donation amount. Please check your balance and input.");
     }
-    else{
-        alert("invalid number");
-    }
-})
-
-
-let BtnMoney2 = document.getElementById('btn-money2')
-BtnMoney2.addEventListener('click', function(event){
+}
+// Donation for Noakhali
+document.getElementById('donate-btn-new1').addEventListener('click', function (event) {
     event.preventDefault();
+    handleDonationNew('donation-input-new1', 'balance-total-new', 'project-balance-new1', 'history-item-new1', 'Flood at Noakhali');
+});
 
-    let inputId2 = parseFloat(document.getElementById('input-id2').value);
-    let addBalance2 = parseFloat(document.getElementById('add-balance2').innerText);
-    let balance2 = parseFloat(document.getElementById('balance').innerText);
-
-    let historyOne = document.getElementById('history-id2')
-
-    if (!isNaN(inputId2) && inputId2 > 0 && inputId2 < balance2) {
-        let total2 = balance2 - inputId2;
-        let Amount2 = addBalance2 + inputId2;
-
-        document.getElementById('add-balance2').innerText = Amount2.toFixed(2);
-        document.getElementById('balance').innerText = total2.toFixed(2);
-        historyOne.innerHTML = ` 
-        <p class="text-xs text-gray-500">${inputId2}  Taka is Donated for Donate for Flood at Noakhali, Bangladesh.
-      </p>
-        <p class="text-xs text-gray-500">Data: ${new Date()}</p>
-        
-    
-    `;
-        document.getElementById('input-id2').value = "";
-        alert("successful");
-    }
-    else{
-        alert("invalid number");
-    }
-})
-
-let BtnMoney3 = document.getElementById('btn-money3')
-BtnMoney3.addEventListener('click', function(event){
+// Donation for Feni
+document.getElementById('donate-btn-new2').addEventListener('click', function (event) {
     event.preventDefault();
+    handleDonationNew('donation-input-new2', 'balance-total-new', 'project-balance-new2', 'history-item-new2', 'Flood at Feni');
+});
 
-    let inputId3 = parseFloat(document.getElementById('input-id3').value);
-    let addBalance3 = parseFloat(document.getElementById('add-balance3').innerText);
-    let balance3 = parseFloat(document.getElementById('balance').innerText);
+// Donation for Quota Protest Relief
+document.getElementById('donate-btn-new3').addEventListener('click', function (event) {
+    event.preventDefault();
+    handleDonationNew('donation-input-new3', 'balance-total-new', 'project-balance-new3', 'history-item-new3', 'Quota Protest Relief');
+});
 
-    lethistoryOne = document.getElementById('history-id3')
+// Blog button click event
+let BtnBlogNew = document.getElementById('btn-blog-new');
+BtnBlogNew.addEventListener('click', function () {
+    window.location.href = "/faq.html"; // Redirect to the FAQ page
+});
 
-    if (!isNaN(inputId3) && inputId3 > 0 && inputId3 < balance3) {
-        let total3 = balance3 - inputId3;
-        let Amount3 = addBalance3 + inputId3;
+// Donation and History button toggle event
+let DonationBtnNew = document.getElementById('donate-toggle-new');
+let HistoryBtnNew = document.getElementById('history-toggle-new');
 
-        document.getElementById('add-balance3').innerText = Amount3.toFixed(2);
-        document.getElementById('balance').innerText = total3.toFixed(2);
-        historyOne.innerHTML = ` 
-        <p class="text-xs text-gray-500">${inputId3}  Taka is Donated for Donate for Flood at Noakhali, Bangladesh.
-      </p>
-        <p class="text-xs text-gray-500">Data: ${new Date()}</p>
-        
-    
-    `;
-        document.getElementById('input-id3').value = "";
-        alert("successful");
-    }
-    else{
-        alert("invalid number");
-    }
-})
+// Show Donation section and hide History section when "Donation" is clicked
+DonationBtnNew.addEventListener('click', function () {
+    DonationBtnNew.classList.add("bg-lime-300");
+    HistoryBtnNew.classList.remove("bg-lime-300");
+
+    let cardSectionNew = document.getElementById('donate-section-new');
+    cardSectionNew.classList.remove("hidden");
+
+    let historySectionNew = document.getElementById('history-section-new');
+    historySectionNew.classList.add("hidden");
+});
+
+// Show History section and hide Donation section when "History" is clicked
+HistoryBtnNew.addEventListener('click', function () {
+    HistoryBtnNew.classList.add("bg-lime-300");
+    DonationBtnNew.classList.remove("bg-lime-300");
+
+    let cardSectionNew = document.getElementById('donate-section-new');
+    cardSectionNew.classList.add("hidden");
+
+    let historySectionNew = document.getElementById('history-section-new');
+    historySectionNew.classList.remove("hidden");
+});
+
+// Common function to handle donations
+
+
+// Event listeners for all three donation buttons
+
