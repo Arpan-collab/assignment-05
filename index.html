@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -11,100 +11,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    
-    <!-- tailwind css  -->
 
-      <style>
-        .lexend-font{
+    <style>
+        .lexend-font {
             font-family: "Lexend", sans-serif;
-            font-optical-sizing: auto;
             font-weight: 600;
-            font-style: normal;
         }
-      </style>
+    </style>
 
 </head>
-    <body class="lexend-font">
-        <header>
-            <nav class="max-w-screen-xl mx-auto pt-4 sticky top-0    bg-slate-200		 ">
-                <div class="navbar ">
-                    <div class="navbar-start">
-                      <button id="btn-blog" class="btn  bg-lime-300">Blog</button>
-                    </div>
-                    <div class="navbar-center gap-4 justify-center items-center">
-                      <img class="w-8" src="./assets/logo.png" alt="">
-                      <h1 class=" md:flex">Donate Bangladesh</h1>
-                    </div>
-                    <div class="navbar-end gap-2 ">
-                      <img src="./assets/coin.png" alt="">
-                      <span><span id="balance">5500</span> BDT</span>
-                     
-                    </div>
-                  </div>
-            </nav>
-
-            <div class="flex justify-center items-center mt-5 gap-4">
-                <button id="donate-btn" class="btn bg-lime-300">Donation</button>
-                <button id="history-btn" class="btn bg-white border text-gray-400 py-3">History</button>
-            </div>
-
-            <!-- card section start here  -->
-           <section id="donate-section">
-            <div class="flex lg:flex-row flex-col gap-8 justify-center items-center mt-14  p-4">
-                <div>
-                    <img src="./assets/noakhali.png" alt="">
+<body class="lexend-font">
+    <header>
+        <nav class="max-w-screen-xl mx-auto pt-4 sticky top-0">
+            <div class="navbar bg-base-100 ">
+                <div class="navbar-start">
+                    <button id="btn-blog-new" class="btn bg-lime-300">Blog</button>
                 </div>
-                <div class="">
-                    <button class="btn"><img src="assets/coin.png" alt=""><span id="add-balance">0</span><span>BDT</span> </button>
+                <div class="navbar-center gap-4 justify-center items-center">
+                    <img class="w-8" src="assets/logo.png" alt="">
+                    <h1 class=" md:flex">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end gap-2 ">
+                    <img src="assets/coin.png" alt="">
+                    <span><span id="balance-total-new">5500</span> BDT</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex justify-center items-center mt-5 gap-4">
+            <button id="donate-toggle-new" class="btn bg-lime-300">Donation</button>
+            <button id="history-toggle-new" class="btn bg-white border text-gray-400 py-3">History</button>
+        </div>
+
+        
+        <section id="donate-section-new">
+            <div class="flex lg:flex-row flex-col gap-8 justify-center items-center mt-14 p-4">
+                <div>
+                    <img src="assets/noakhali.png" alt="">
+                </div>
+                <div>
+                    <button class="btn"><img src="assets/coin.png" alt=""><span id="project-balance-new1">1000</span> BDT</button>
                     <h1 class="text-bold text-xl mt-4">Donate for Flood at Noakhali, Bangladesh</h1>
-                    <p class="text-base font-light text-gray mt-6"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution,<br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="input-id" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6 " />
-                    <button id="btn-money" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
+                    <p class="text-base font-light text-gray mt-6"> 
+                        The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution,<br> big or small, makes a difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
+                    <input id="donation-input-new1" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6" />
+                    <button id="donate-btn-new1" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
                 </div>
             </div>
             <div class="flex lg:flex-row flex-col gap-8 justify-center items-center mt-16 p-4">
                 <div>
-                    <img src="./assets/feni.png" alt="">
+                    <img src="assets/feni.png" alt="">
                 </div>
-                <div class="">
-                    <button class="btn"><img src="assets/coin.png" alt=""><span id="add-balance2">600</span><span>BDT</span> </button>
-                    <h1 class="text-bold text-xl mt-4">Donate for Flood at Noakhali, Bangladesh</h1>
-                    <p class="text-base font-light text-gray mt-6"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution,<br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="input-id2" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6 " />
-                    <button id="btn-money2" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
+                <div>
+                    <button class="btn"><img src="assets/coin.png" alt=""><span id="project-balance-new2">600</span> BDT</button>
+                    <h1 class="text-bold text-xl mt-4">Donate for Flood at Feni, Bangladesh</h1>
+                    <p class="text-base font-light text-gray mt-6"> The recent floods in Feni have caused significant damage to <br> homes and infrastructure. Your donation will help provide essential <br> supplies and relief to those affected by this disaster. Every contribution,<br> big or small, makes a difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
+                    <input id="donation-input-new2" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6" />
+                    <button id="donate-btn-new2" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
                 </div>
             </div>
             <div class="flex lg:flex-row flex-col gap-8 justify-center items-center mt-16 p-4">
                 <div>
-                    <img src="./assets/quota-protest.png" alt="">
+                    <img src="assets/quota-protest.png" alt="">
                 </div>
-                <div class="">
-                    <button class="btn"><img src="assets/coin.png" alt=""><span id="add-balance3">2400</span><span>BDT</span> </button>
-                    <h1 class="text-bold text-xl mt-4">Donate for Flood at Noakhali, Bangladesh</h1>
-                    <p class="text-base font-light text-gray mt-6"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution,<br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="input-id3" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6 " />
-                    <button id="btn-money3" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
+                <div>
+                    <button class="btn"><img src="assets/coin.png" alt=""><span id="project-balance-new3">2400</span> BDT</button>
+                    <h1 class="text-bold text-xl mt-4">Donate for Quota Protest Relief</h1>
+                    <p class="text-base font-light text-gray mt-6"> The recent quota protests have resulted in significant disruptions.<br> Your donation will help provide relief and support to those affected by <br> the protests. Every contribution, big or small, makes a difference.<br> Please join us in supporting the relief efforts.</p>
+                    <input id="donation-input-new3" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-6" />
+                    <button id="donate-btn-new3" class="btn btn-block bg-lime-400 mt-6">Donate Now</button>
                 </div>
             </div>
-           </section>
+        </section>
 
-           <section id="history-section" class="max-w-screen-xl mx-auto hidden mt-6">
-            <div id="history-id1" class="shadow py-4">
-                
-            </div>
-            <div id="history-id2" class="shadow py-4">
-                
-            </div>
-            <div id="history-id3" class="shadow py-4">
-                
-            </div>
-           </section>
-            
-        </header>
+        <section id="history-section-new" class="max-w-screen-xl mx-auto hidden mt-6">
+            <div id="history-item-new1" class="shadow py-4"></div>
+            <div id="history-item-new2" class="shadow py-4"></div>
+            <div id="history-item-new3" class="shadow py-4"></div>
+        </section>
+    </header>
 
-
-    <script src="/home.js"></script>
-    <script src="/history.js"></script>
-    </body>
-
+    <script src="home.js"></script>
+    
+</body>
 </html>
