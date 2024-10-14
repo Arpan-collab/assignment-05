@@ -74,8 +74,8 @@ HistoryBtnNew.addEventListener('click', function () {
     historySectionNew.classList.remove("hidden");
 });
 
-// Common function to handle donations
 
 
-// Event listeners for all three donation buttons
+
+
 
