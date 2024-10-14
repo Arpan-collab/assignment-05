@@ -43,7 +43,7 @@ document.getElementById('donate-btn-new3').addEventListener('click', function (e
 // Blog button click event
 let BtnBlogNew = document.getElementById('btn-blog-new');
 BtnBlogNew.addEventListener('click', function () {
-    window.location.href = "/faq.html"; // Redirect to the FAQ page
+    window.location.href = "faq.html"; // Redirect to the FAQ page
 });
 
 // Donation and History button toggle event
@@ -74,8 +74,8 @@ HistoryBtnNew.addEventListener('click', function () {
     historySectionNew.classList.remove("hidden");
 });
 
+// Common function to handle donations
 
 
-
-
+// Event listeners for all three donation buttons
 
